@@ -68,7 +68,8 @@ fun App() {
                 state = listState,
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(innerPadding)
+                    .padding(innerPadding),
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 item {
                     HeroSection(
