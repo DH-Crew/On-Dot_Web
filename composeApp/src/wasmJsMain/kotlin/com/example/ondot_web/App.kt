@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
@@ -249,26 +250,21 @@ private fun ContactSection(email: String, onContactClick: () -> Unit) {
     Box(
         Modifier
             .fillMaxWidth()
-            .padding(20.dp),
+            .padding(28.dp)
+            .background(color = Color(0xFFF1F5F9), shape = RoundedCornerShape(12.dp)),
         contentAlignment = Alignment.Center
     ) {
-        Card(
-            modifier = Modifier
+        Column(
+            Modifier
+                .padding(20.dp)
                 .fillMaxWidth(),
-            colors = CardDefaults.cardColors(containerColor = Color(0xFFF1F5F9))
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Column(
-                Modifier
-                    .padding(20.dp)
-                    .fillMaxWidth(),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Text("함께 만들고 싶으신가요?", style = OnDotTypo().bodyLargeR1)
-                Spacer(Modifier.height(8.dp))
-                Text("프로덕트/협업 문의는 메일로 연락 주세요: $email", style = OnDotTypo().bodyLargeR1, textAlign = TextAlign.Center)
-                Spacer(Modifier.height(14.dp))
-                Button(onClick = onContactClick) { Text("이메일 보내기", style = OnDotTypo().bodyLargeR1) }
-            }
+            Text("함께 만들고 싶으신가요?", style = OnDotTypo().bodyLargeR1)
+            Spacer(Modifier.height(8.dp))
+            Text("프로덕트/협업 문의는 메일로 연락 주세요: $email", style = OnDotTypo().bodyLargeR1, textAlign = TextAlign.Center)
+            Spacer(Modifier.height(14.dp))
+            Button(onClick = onContactClick) { Text("이메일 보내기", style = OnDotTypo().bodyLargeR1) }
         }
     }
 }
