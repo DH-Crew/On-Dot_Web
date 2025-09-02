@@ -297,28 +297,24 @@ private fun sampleMembers() = listOf(
         role = "Android/KMP",
         bio = "Compose, KMP로 실무형 아키텍처를 설계/구현합니다.",
         photo = { Image(painterResource(Res.drawable.compose_multiplatform), null, modifier = Modifier.fillMaxSize(), contentScale = ContentScale.Crop) },
-        links = listOf("GitHub" to "https://github.com/dogmania")
     ),
     TeamMember(
         name = "박세린",
         role = "Designer",
         bio = "사용자 경험과 비주얼 아이덴티티를 책임지며, 제품의 첫인상을 만듭니다.",
         photo = { Image(painterResource(Res.drawable.ic_mang), null, modifier = Modifier.fillMaxSize(), contentScale = ContentScale.Crop) },
-        links = listOf("GitHub" to "https://github.com/dogmania")
     ),
     TeamMember(
         name = "오남택",
         role = "Project Manager",
         bio = "팀의 일정과 목표를 조율하며, 원활한 협업과 성공적인 결과물을 이끕니다.",
         photo = { Image(painterResource(Res.drawable.ic_taek), null, modifier = Modifier.fillMaxSize(), contentScale = ContentScale.Crop) },
-        links = listOf("GitHub" to "https://github.com/dogmania")
     ),
     TeamMember(
         name = "문희상",
         role = "Backend",
         bio = "안정적인 API와 배포 파이프라인을 책임집니다.",
         photo = { Image(painterResource(Res.drawable.ic_capybara), null, modifier = Modifier.fillMaxSize(), contentScale = ContentScale.Crop) },
-        links = listOf("GitHub" to "https://github.com/dogmania")
     )
 )
 
