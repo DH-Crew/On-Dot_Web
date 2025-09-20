@@ -16,4 +16,5 @@ captures
 !*.xcodeproj/project.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
-.vercel
+.vercel/*
+!.vercel/project.json
