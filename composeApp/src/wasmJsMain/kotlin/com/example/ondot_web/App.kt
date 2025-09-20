@@ -35,6 +35,7 @@ import ondotweb.composeapp.generated.resources.ic_capybara
 import ondotweb.composeapp.generated.resources.ic_mang
 import ondotweb.composeapp.generated.resources.ic_taek
 import org.jetbrains.compose.resources.painterResource
+import org.w3c.dom.HTMLMetaElement
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -45,7 +46,7 @@ fun App() {
         ensureMeta(property = "og:title", content = "OnDot — 팀 소개")
         ensureMeta(property = "og:description", content = "KMP/Compose Multiplatform로 만든 OnDot 팀 소개 페이지")
         ensureMeta(property = "og:type", content = "website")
-        ensureMeta(name = "google-site-verification", content = "GtWaG3wfkqOoonLKI1DCc7RtbcjxFzlrzUPzFJ_lLTI")
+        ensureMetaInBody(name = "google-site-verification", content = "GtWaG3wfkqOoonLKI1DCc7RtbcjxFzlrzUPzFJ_lLTI")
     }
 
     val sections = listOf(Section.Hero, Section.Team, Section.Values, Section.Contact, Section.Footer)
@@ -335,4 +336,11 @@ private fun ensureMeta(name: String? = null, property: String? = null, content: 
         head.appendChild(it)
     }
     tag.setAttribute("content", content)
+}
+
+fun ensureMetaInBody(name: String, content: String) {
+    val meta = document.createElement("meta") as HTMLMetaElement
+    meta.setAttribute("name", name)
+    meta.setAttribute("content", content)
+    document.body?.appendChild(meta)
 }
