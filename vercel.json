@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "buildCommand": "./gradlew :composeApp:wasmJsBrowserDistribution",
-  "outputDirectory": "composeApp/build/dist/wasmJs/productionExecutable",
+  "buildCommand": "true",
+  "outputDirectory": "site",
   "cleanUrls": true,
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "trailingSlash": false
 }

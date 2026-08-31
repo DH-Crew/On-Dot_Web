@@ -1,3 +1,18 @@
+# OnDot Web
+
+온닷 서비스 소개 웹사이트입니다. Claude 디자인 산출물은 `web_proto/`에 원본으로 보관하고,
+실제 배포 파일은 `site/`에 둡니다. Vercel은 `site/`를 정적 웹사이트로 배포합니다.
+
+로컬에서는 아래 명령으로 확인할 수 있습니다.
+
+```shell
+python3 -m http.server 8080 --directory site
+```
+
+기존 Compose Multiplatform 웹 구현은 참고용으로 유지되어 있습니다.
+
+## Legacy Compose project
+
 This is a Kotlin Multiplatform project targeting Web.
 
 * [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
