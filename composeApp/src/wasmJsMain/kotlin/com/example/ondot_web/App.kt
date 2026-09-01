@@ -92,8 +92,8 @@ fun App() {
 
                 item {
                     ContactSection(
-                        email = "teamdh1216@gmail.com",
-                        onContactClick = { window.open("mailto:teamdh1216@gmail.com?subject=[문의] OnDot 팀 소개", "_self") }
+                        email = "contact@on-dot.site",
+                        onContactClick = { window.open("mailto:contact@on-dot.site?subject=[문의] OnDot 팀 소개", "_self") }
                     )
                 }
             }
